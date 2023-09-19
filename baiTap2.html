@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <input type="number" name="month" id="month" />
+      <button type="submit" onclick="dayMonth();">Tính tháng</button>
+      <div id="result"></div>
+    </form>
+    <script>
+      function dayMonth() {
+        let month = Number(document.getElementById("month").value);
+        let day;
+        console.log(month, typeof month);
+        switch (month) {
+          case 1:
+            day = "31 Ngày";
+            break;
+          case 2:
+            day = "28 hoặc 29 ngày";
+            break;
+          default:
+            day = "Không rõ";
+        }
+        document.getElementById("result").innerHTML =
+          "Tháng " + month + " có " + day;
+      }
+    </script>
+  </body>
+</html>
